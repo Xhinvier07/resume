@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="./images/code-solid.svg" >
+	<title>| Shin Resume</title>
+	<script src="https://kit.fontawesome.com/3ef3559250.js" crossorigin="anonymous"></script>
+    <style>
+      @font-face {
+        font-family: Catamaran;
+        src: url("./fonts/Catamaran-Black.ttf");
+      }
+
+      @font-face {
+        font-family: Now;
+        src: url("./fonts/NowAlt-Regular.otf");
+      }
+       
+    :root {
+    --bg-clr: #86dff2;
+    --white: #141c40;
+    --rleft-bg: #fff;
+    --rright-bg: #fff;
+    --primary-text-clr: black;
+    --black: black;
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Now";
+    }
+
+    body {
+    background: var(--bg-clr);
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--primary-text-clr);
+    padding: 0 20px;
+    }
+
+    h2 {
+    font-family: "Catamaran";
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 20px;
+  
+    }
+
+    .resume {
+    /* whole part */
+    width: 820px;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: 50px auto;
+    background: var(--white);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .resume .resume_left {
+    width: 270px;
+    color:white;
+    }
+
+    .resume .resume_right {
+    background: var(--rright-bg);
+    width: calc(900px - 320px);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px
+    }
+
+    .resume_left .r_profile_pic,
+    .resume_right .r_namerole {
+    /* top right  text*/
+    width: 100%;
+    height: 210px;
+    padding-left: 60px;
+    padding-top: 30px;
+    }
+
+    .resume_left .r_profile_pic {
+    background: var(--rleft-bg);
+    
+    border-top-left-radius: 5px;
+    }
+
+    .resume_left .r_profile_pic img {
+    width: 80%;
+    }
+
+    .resume_left .r_left_sub {
+    padding: 30px;
+    padding-right: 10px;
+    }
+
+    .resume_left .r_left_sub > div:not(:last-child),
+    .resume_right .r_right_sub > div:not(:last-child) {
+    margin-bottom: 20px;
+    }
+
+    .resume_left .about p {
+    text-align: left;
+    font-size: 14px
+    }
+
+    .resume_left .r_skills ul li,
+    .resume_left .r_skills ul li p:first-child,
+    .resume_left .r_hobbies ul li p:first-child {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    }
+
+    .resume_left .r_skills ul li:not(:last-child) {
+    margin-bottom: 10px;
+    }
+
+    .resume_left .r_skills ul li p:first-child,
+    .resume_left .r_hobbies ul li p:first-child {
+    /* icons */
+    width: 45px;
+    height: 45px;
+    background: var(--rleft-bg);
+    margin-right: 15px;
+    border-radius: 10%;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--white);
+
+    }
+
+    .resume_left .r_hobbies ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    }
+
+    .resume_left .r_hobbies ul li {
+    margin-bottom: 10px;
+    }
+
+    .resume_left .r_hobbies ul li p:hover {
+    background: var(--rright-bg);
+    }
+
+    .resume_right .r_namerole p {
+    /* name and role */
+    font-family: "Catamaran";
+ 
+    font-size: 60px;
+    line-height: 90px;
+    margin-left: -30px;
+    }
+
+    .resume_right .r_namerole p:last-child {
+    font-size: 22px;
+    line-height: 50px;
+    color: var(--white);
+    font-family: "Now";
+    }
+
+    .resume_right .r_info {
+    padding: 35px;
+    background: var(--white);
+    }
+
+    .resume_right .r_info ul {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .resume_right .r_info p {
+    font-weight: 700;
+    font-size: 18px;
+    }
+
+    .resume_right .r_right_sub {
+
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 0;
+  
+  
+    }
+
+    .resume_right .r_right_sub p {
+    color: var(--white);
+    }
+
+    .resume_right .r_right_sub ul li {
+    display: flex;
+    margin-bottom: 20px;
+    
+    }
+
+    .resume_right .r_right_sub ul li div:first-child {
+    width: 25%;
+    margin-right: 15px;
+    
+    }
+
+    .resume_right .r_right_sub ul li div:last-child {
+
+    /* header  category */
+    width: 100%;
+    
+    }
+
+    .resume_right .r_right_sub p:first-child {   /* header */
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+
+    }
+
+    img{
+      
+        border-radius: 50%;
+        border: 5px #141c40 solid;
+        border-image-slice: 1;
+        border-width: 5px;
+        /* circular gradient border */
+        background: conic-gradient(from -90deg, #015b93, #ffffff);
+        transition: transform 0.3s ease;
+    }
+
+    img:hover{
+        transform: rotateY(180deg);
+    }
+
+    .name{
+       /* insert montserrat font*/
+        color: #141c40;
+    }
+
+    .role{
+      font-family: "Now";
+      font-weight: 300;
+    }
+
+    
+    .line{
+      width: 240px;
+      height: 5px;
+      background: #0d248d;
+      border-radius: 10px;
+      margin-left: -30px;
+      margin-top: -10px;
+    }
+
+    .awards{
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .hon_awa{
+      margin-right: 10px;
+    }
+
+    .prog{
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .lang{
+      font-size: 16px;
+      margin-right: 15px;
+      padding: 5px;
+    
+    }
+
+    </style>
+
+</head>
+<body>
+
+<section class="resume">
+	<div class="resume_left">
+
+	    <div class="r_profile_pic">
+	      <img src="./images/pic.png" alt="pic">
+	    </div>
+
+	    <div class="r_left_sub">
+	      <div class="about">
+	        <h2>CONTACT</h2>
+          <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp; 09052536056</p>
+          <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;  jansenmoral@gmail.com</p>
+          <p><i class="fa-solid fa-house"></i>&nbsp;&nbsp; Rodriguez Rizal</p>
+          <p><i class="fa-brands fa-github"></i>&nbsp;&nbsp;  github.com/Xhinvier07</p>
+
+	      </div>
+	      <div class="r_skills">
+	        <h2>Skills</h2>
+	        <ul>
+	          <li>
+	            <p><i class="fa-solid fa-code"></i></p>
+	            <p>Programming</p>
+	          </li>
+	          <li>
+	            <p><i class="fa-solid fa-robot"></i></p>
+	            <p>Robotics</p>
+	          </li>
+	          <li>
+	            <p><i class="fa-solid fa-music"></i></p>
+	            <p>Piano & Violin</p>
+	          </li>
+	          <li>
+	            <p><i class="fa-solid fa-pen-nib"></i></p>
+	            <p>Research Writing</p>
+	          </li>
+	          <li>
+	            <p><i class="fa-solid fa-camera"></i></p>
+	            <p>Photography</p>
+	          </li>
+	        </ul>
+	      </div>
+	      <div class="r_hobbies">
+	        <h2 class="prog">programming language</h2>
+          <ul>
+	            <p class="lang">C++</p>
+	            <p class="lang">Python</p>
+              <p class="lang">Java</p>
+              <p class="lang">PHP</p>
+              <p class="lang">C#</p>
+              <p class="lang">SQL</p>
+  
+	        </ul>
+	      </div>
+	    </div>
+	</div>
+
+
+	<div class="resume_right">
+	    <div class="r_namerole">
+        <br>
+	      <p class="name">JANSEN MORAL</p>
+        <hr class="line">
+        
+	      <p class="role">SOFTWARE ENGINEER</p>
+	    </div>
+      
+
+	    <div class="r_right_sub">
+	      <div class="edu">
+	        <h2>Education</h2>
+	        <ul>
+	          <li>
+
+	            <div class="r_ed_right">
+	              <p>FEU Institute of Technology (2022 - Present)</p>
+	              <p>💻 BS Computer Science with Specialization in Software Engineering</p>
+                  <p>💻 Elite Scholarship 100% (Merit)</p>
+                  <p>💻 GWA: 3.68/4.00  (A.Y. 2022)</p>
+	            </div>
+	          </li>
+	          <li>
+	            <div class="r_ed_right">
+                <p>City of Mandaluyong Science High School (2016 - 2022)</p>
+                <p>💻 Junior High School and STEM Senior High School</p>
+                <p>💻 Academic Excellence: High Honors (S.Y. 2020 - 2022)</p>
+	            </div>
+	          </li>
+	        </ul>
+	      </div>
+	      <div class="hon_awa">
+	        <h2 class="awards">HONORS & AWARDS</h2>
+          <p>💻 4th Place Winner, First Gen Corporation Code Green National Pitching Competition</p>
+          <p>💻 Champion, CODEQUEST 2024 FEU TECH ACM (Ideathon Competition)</p>
+          <p>💻 Champion, Design Thinking Summit FEU TECH (Pitching Competition)</p>
+          <p>💻 Champion, FEU TECH ACM KODE KOMBAT: SUBSERVIENCE (Programming)</p>
+          <p>💻 Top Performing Student of Computer Studies (Rank 10: A.Y. 2022)</p>
+          <p>💻 2nd Place, WordPress Website Project at Microgenesis Internship</p>
+          <p>💻 Finalist, Challenge #001 x Glide of No-Code PH</p>
+          <p>💻 Top 250, Blue Ocean High School Entrepreneur International Pitching Competition</p>
+	      </div>
+
+        <div class="experience">
+	        <h2>experience</h2>
+	        <ul>
+	          <li>
+
+	            <div class="r_ed_right">
+	              <p>Microgenesis Business Systems</p>
+	              <p>💻 DevOps Intern</p>
+                <p>💻 Designed a bakery website with WordPress and Elementor</p>
+                <p>💻 Trained in programming and designing a CRUD table with JQuery</p>
+                <p>💻 Trained in Microsoft Power Automate</p>
+                <p>💻 Trained in Database Design and Website Design</p>
+                <p>💻 Trained in business skills and communication skills</p>
+	            </div>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	</div>
+</section>
+</body>
+</html>
+
+
+
