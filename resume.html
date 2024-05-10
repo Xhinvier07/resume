@@ -16,11 +16,11 @@
       }
        
     :root {
-    --bg-clr: #86dff2;
-    --white: #141c40;
-    --rleft-bg: #fff;
-    --rright-bg: #fff;
-    --primary-text-clr: black;
+    --lightB: #86dff2;
+    --blue: #141c40;
+    --left: #fff;
+    --right: #fff;
+    --text: black;
     --black: black;
     }
 
@@ -33,10 +33,10 @@
     }
 
     body {
-    background: var(--bg-clr);
+    background: var(--lightB);
     font-size: 12px;
     line-height: 20px;
-    color: var(--primary-text-clr);
+    color: var(--text);
     padding: 0 20px;
     }
 
@@ -56,7 +56,7 @@
     height: auto;
     display: flex;
     margin: 50px auto;
-    background: var(--white);
+    background: var(--blue);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
 
@@ -66,14 +66,14 @@
     }
 
     .resume .resume_right {
-    background: var(--rright-bg);
+    background: var(--right);
     width: calc(900px - 320px);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px
     }
 
-    .resume_left .r_profile_pic,
-    .resume_right .r_namerole {
+    .resume_left .profile,
+    .resume_right .namerole {
     /* top right  text*/
     width: 100%;
     height: 210px;
@@ -81,23 +81,23 @@
     padding-top: 30px;
     }
 
-    .resume_left .r_profile_pic {
-    background: var(--rleft-bg);
+    .resume_left .profile {
+    background: var(--left);
     
     border-top-left-radius: 5px;
     }
 
-    .resume_left .r_profile_pic img {
+    .resume_left .profile img {
     width: 80%;
     }
 
-    .resume_left .r_left_sub {
+    .resume_left .leftsub {
     padding: 30px;
     padding-right: 10px;
     }
 
-    .resume_left .r_left_sub > div:not(:last-child),
-    .resume_right .r_right_sub > div:not(:last-child) {
+    .resume_left .leftsub > div:not(:last-child),
+    .resume_right .rightsub > div:not(:last-child) {
     margin-bottom: 20px;
     }
 
@@ -106,48 +106,48 @@
     font-size: 14px
     }
 
-    .resume_left .r_skills ul li,
-    .resume_left .r_skills ul li p:first-child,
-    .resume_left .r_hobbies ul li p:first-child {
+    .resume_left .skills ul li,
+    .resume_left .skills ul li p:first-child,
+    .resume_left .proglang ul li p:first-child {
     display: flex;
     align-items: center;
     font-size: 14px;
     }
 
-    .resume_left .r_skills ul li:not(:last-child) {
+    .resume_left .skills ul li:not(:last-child) {
     margin-bottom: 10px;
     }
 
-    .resume_left .r_skills ul li p:first-child,
-    .resume_left .r_hobbies ul li p:first-child {
+    .resume_left .skills ul li p:first-child,
+    .resume_left .proglang ul li p:first-child {
     /* icons */
     width: 45px;
     height: 45px;
-    background: var(--rleft-bg);
+    background: var(--left);
     margin-right: 15px;
     border-radius: 10%;
     justify-content: center;
     font-size: 14px;
-    color: var(--white);
+    color: var(--blue);
 
     }
 
-    .resume_left .r_hobbies ul {
+    .resume_left .proglang ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
     }
 
-    .resume_left .r_hobbies ul li {
+    .resume_left .proglang ul li {
     margin-bottom: 10px;
     }
 
-    .resume_left .r_hobbies ul li p:hover {
-    background: var(--rright-bg);
+    .resume_left .proglang ul li p:hover {
+    background: var(--right);
     }
 
-    .resume_right .r_namerole p {
+    .resume_right .namerole p {
     /* name and role */
     font-family: "Catamaran";
  
@@ -156,29 +156,29 @@
     margin-left: -30px;
     }
 
-    .resume_right .r_namerole p:last-child {
+    .resume_right .namerole p:last-child {
     font-size: 22px;
     line-height: 50px;
-    color: var(--white);
+    color: var(--blue);
     font-family: "Now";
     }
 
-    .resume_right .r_info {
+    .resume_right .info {
     padding: 35px;
-    background: var(--white);
+    background: var(--blue);
     }
 
-    .resume_right .r_info ul {
+    .resume_right .info ul {
     display: flex;
     justify-content: space-between;
     }
 
-    .resume_right .r_info p {
+    .resume_right .info p {
     font-weight: 700;
     font-size: 18px;
     }
 
-    .resume_right .r_right_sub {
+    .resume_right .rightsub {
 
     padding-left: 20px;
     padding-top: 10px;
@@ -187,30 +187,29 @@
   
     }
 
-    .resume_right .r_right_sub p {
-    color: var(--white);
+    .resume_right .rightsub p {
+    color: var(--blue);
     }
 
-    .resume_right .r_right_sub ul li {
+    .resume_right .rightsub ul li {
     display: flex;
     margin-bottom: 20px;
     
     }
 
-    .resume_right .r_right_sub ul li div:first-child {
+    .resume_right .rightsub ul li div:first-child {
     width: 25%;
     margin-right: 15px;
     
     }
 
-    .resume_right .r_right_sub ul li div:last-child {
-
+    .resume_right .rightsub ul li div:last-child {
     /* header  category */
     width: 100%;
     
     }
 
-    .resume_right .r_right_sub p:first-child {   /* header */
+    .resume_right .rightsub p:first-child {   /* header */
     font-size: 18px;
     margin-bottom: 5px;
     margin-top: -10px;
@@ -281,11 +280,11 @@
 <section class="resume">
 	<div class="resume_left">
 
-	    <div class="r_profile_pic">
+	    <div class="profile">
 	      <img src="./images/pic.png" alt="pic">
 	    </div>
 
-	    <div class="r_left_sub">
+	    <div class="leftsub">
 	      <div class="about">
 	        <h2>CONTACT</h2>
           <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp; 09052536056</p>
@@ -294,7 +293,7 @@
           <p><i class="fa-brands fa-github"></i>&nbsp;&nbsp;  github.com/Xhinvier07</p>
 
 	      </div>
-	      <div class="r_skills">
+	      <div class="skills">
 	        <h2>Skills</h2>
 	        <ul>
 	          <li>
@@ -319,7 +318,7 @@
 	          </li>
 	        </ul>
 	      </div>
-	      <div class="r_hobbies">
+	      <div class="proglang">
 	        <h2 class="prog">programming language</h2>
           <ul>
 	            <p class="lang">C++</p>
@@ -336,7 +335,7 @@
 
 
 	<div class="resume_right">
-	    <div class="r_namerole">
+	    <div class="namerole">
         <br>
 	      <p class="name">JANSEN MORAL</p>
         <hr class="line">
@@ -345,7 +344,7 @@
 	    </div>
       
 
-	    <div class="r_right_sub">
+	    <div class="rightsub">
 	      <div class="edu">
 	        <h2>Education</h2>
 	        <ul>
@@ -388,10 +387,10 @@
 	              <p>Microgenesis Business Systems</p>
 	              <p>💻 DevOps Intern</p>
                 <p>💻 Designed a bakery website with WordPress and Elementor</p>
-                <p>💻 Trained in programming and designing a CRUD table with JQuery</p>
-                <p>💻 Trained in Microsoft Power Automate</p>
-                <p>💻 Trained in Database Design and Website Design</p>
-                <p>💻 Trained in business skills and communication skills</p>
+                <p>💻 Received training in programming and designing a CRUD table with JQuery</p>
+                <p>💻 Received training in Microsoft Power Automate</p>
+                <p>💻 Received training in Database Design and Website Design</p>
+                <p>💻 Received training in business skills and communication skills</p>
 	            </div>
 	          </li>
 	        </ul>
